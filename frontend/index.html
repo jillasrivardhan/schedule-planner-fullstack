@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Daily Schedule Planner</title><link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header class="topbar"><div><div class="eyebrow">LANGGRAPH • FASTAPI • GOOGLE CALENDAR</div><h1>AI Daily Schedule Planner</h1><p>Agentic planning with deterministic time scheduling.</p></div><div class="top-actions"><span id="connection" class="status">Checking…</span><button id="googleBtn" class="secondary">Connect Google Calendar</button></div></header>
+<main class="container">
+<section class="hero card"><div><span class="pill">Single Agent</span><h2>Plan your day without broken time arithmetic.</h2><p>The agent decides priorities and gathers context. Python calculates exact slots and validates every generated schedule.</p></div><div class="hero-grid"><div><strong>1</strong><span>Understand</span></div><div><strong>2</strong><span>Gather tools</span></div><div><strong>3</strong><span>Schedule</span></div><div><strong>4</strong><span>Validate</span></div></div></section>
+<div class="grid">
+<section class="card"><div class="section-head"><h3>Plan a day</h3><span id="calendarSource" class="muted">Local calendar</span></div><label>Date</label><input id="date" type="date"><label>What do you want?</label><textarea id="request" rows="4">Create the most productive realistic schedule. Prioritize urgent tasks, respect my calendar and preferences, include breaks and exercise, and don't overload my day.</textarea><button id="planBtn" class="primary">Generate Schedule</button><div id="message" class="message"></div></section>
+<section class="card"><div class="section-head"><h3>Pending tasks</h3><button id="refreshBtn" class="small">Refresh</button></div><div id="tasks"></div><div class="add-task"><h4>Add task</h4><input id="taskTitle" placeholder="Task title"><div class="row"><select id="taskPriority"><option value="high">High</option><option value="medium" selected>Medium</option><option value="low">Low</option></select><input id="taskDuration" type="number" min="15" value="60" placeholder="Minutes"></div><input id="taskDeadline" type="date"><button id="addTaskBtn" class="secondary">Add Task</button></div></section>
+</div>
+<section class="card"><div class="section-head"><div><h3>Generated schedule</h3><span id="validation" class="muted">Nothing generated yet.</span></div><button id="approveBtn" class="primary" disabled>Approve & Save</button></div><div id="schedule" class="schedule-empty">Generate a schedule to see the result here.</div></section>
+<section class="card"><div class="section-head"><h3>Agent reasoning</h3></div><pre id="reasoning">The agent's tool-gathering summary will appear here.</pre></section>
+</main><script src="/app.js"></script>
+</body></html>
